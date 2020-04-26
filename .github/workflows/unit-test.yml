@@ -1,0 +1,12 @@
+name: "CI"
+on:
+  push:
+
+jobs:
+  # unit tests
+  units:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: yarn install
+    - run: yarn test
