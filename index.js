@@ -8,9 +8,9 @@ const { Minimatch } = require("minimatch");
 // most @actions toolkit packages have async methods
 async function run() {
   try {
-    const octokit = new github.GitHub(token);
     const token = core.getInput("token", { required: true });
     const configPath = core.getInput("config");
+    const octokit = new github.GitHub(token);
 
     const configContent = await fetchContent(octokit, configPath);
     const config = parseConfig(configContent);
