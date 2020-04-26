@@ -29,7 +29,7 @@ async function run() {
 
     _.each(_.keys(config), (globPattern) => {
       if (hasGlobPatternMatchedFile(changedFiles, globPattern)) {
-        let reviewers = config["globPattern"];
+        let reviewers = config[globPattern];
         assignReviewers(octokit, reviewers);
       }
     });
