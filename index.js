@@ -25,7 +25,7 @@ async function run() {
       reviewers: [],
     });
 
-    const changedFiles = getChangedFiles(octokit, pullRequest.number);
+    const changedFiles = await getChangedFiles(octokit, pullRequest.number);
 
     _.each(_.keys(config), (globPattern) => {
       if (hasGlobPatternMatchedFile(changedFiles, globPattern)) {
