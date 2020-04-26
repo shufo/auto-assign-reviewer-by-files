@@ -26,10 +26,11 @@ async function run() {
     });
 
     const changedFiles = await getChangedFiles(octokit, pullRequest.number);
+    const author = pullRequest.user.login;
 
     _.each(_.keys(config), (globPattern) => {
       if (hasGlobPatternMatchedFile(changedFiles, globPattern)) {
-        let reviewers = config[globPattern];
+        let reviewers = _.pull(config[globPattern], author);
         assignReviewers(octokit, reviewers);
       }
     });
