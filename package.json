@@ -29,7 +29,7 @@
     "@actions/github": "^2.1.1",
     "lodash": "^4.17.15",
     "minimatch": "^3.0.4",
-    "yaml": "^1.8.2"
+    "yaml": "^1.9.2"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.20.5",
