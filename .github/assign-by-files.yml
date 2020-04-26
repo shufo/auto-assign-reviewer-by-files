@@ -4,5 +4,6 @@
   - shufo
 # you can set multiple reviewers
 '.github/**/*.yml':
+  - shufo
   - shufo2
   - foo
