@@ -6,3 +6,4 @@
 '.github/**/*.yml':
   - shufo
   - shufo2
+  - foo
