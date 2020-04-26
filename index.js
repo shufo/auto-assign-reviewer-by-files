@@ -67,7 +67,7 @@ async function getChangedFiles(client, prNumber) {
 }
 
 function hasGlobPatternMatchedFile(changedFiles, globPattern) {
-  for (const changedFile in changedFiles) {
+  for (const changedFile of changedFiles) {
     if (Minimatch(changedFile, globPattern)) {
       return true;
     }
