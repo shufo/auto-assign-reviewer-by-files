@@ -520,10 +520,10 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
-"@zeit/ncc@^0.20.5":
-  version "0.20.5"
-  resolved "https://registry.yarnpkg.com/@zeit/ncc/-/ncc-0.20.5.tgz#a41af6e6bcab4a58f4612bae6137f70bce0192e3"
-  integrity sha512-XU6uzwvv95DqxciQx+aOLhbyBx/13ky+RK1y88Age9Du3BlA4mMPCy13BGjayOrrumOzlq1XV3SD/BWiZENXlw==
+"@zeit/ncc@^0.22.2":
+  version "0.22.2"
+  resolved "https://registry.yarnpkg.com/@zeit/ncc/-/ncc-0.22.2.tgz#4b59cdffaad6babaccb90806fb37bc22de590014"
+  integrity sha512-LGW5RPIwulh+fyKiMTgbIEbdc/hdf/4+U5B1WbT/We0jweHoywDbk9hi+3hNjSzQNShGumP72zgc6PHEUG5syg==
 
 abab@^2.0.0:
   version "2.0.3"
