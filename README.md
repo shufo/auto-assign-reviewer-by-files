@@ -1,4 +1,3 @@
-
 ![CI](https://github.com/shufo/auto-assign-reviewer-by-assignee/workflows/CI/badge.svg)
 
 # Auto Assign Reviewer By Files
@@ -21,6 +20,8 @@ create configuration file
   - foo
   - bar
 ```
+
+Glob matching is based on the [minimatch library](https://github.com/isaacs/minimatch).
 
 create action file
 
