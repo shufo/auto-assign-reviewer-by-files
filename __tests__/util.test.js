@@ -1,14 +1,24 @@
 const { parseConfig } = require("../lib/util");
 const fs = require("fs");
-const configFilePath = "assign-by-files-sample.yml";
 var Minimatch  = require("minimatch");
 
 test("config parser", async () => {
-  const content = fs.readFileSync(__basedir + "/__tests__/" + configFilePath, {
+  const content = fs.readFileSync(__basedir + "/__tests__/assign-by-files-sample.yml", {
     encoding: "utf8",
   });
   const config = parseConfig(content);
   expect(config["*.js"]).toMatchObject(["someone"]);
+});
+
+test("bad config parser", async () => {
+  const content = fs.readFileSync(__basedir + "/__tests__/assign-by-files-dup.yml", {
+    encoding: "utf8",
+  });
+  try {
+    const config = parseConfig(content);
+    fail("exception expected");
+  } catch(error) {
+  }
 });
 
 test("glob pattern test", async () => {
