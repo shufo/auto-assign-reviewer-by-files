@@ -6,26 +6,26 @@ const _ = require("lodash");
 var Minimatch = require("minimatch");
 
 // most @actions toolkit packages have async methods
-function run() {
+async function run() {
   try {
     const token = core.getInput("token", { required: true });
     const configPath = core.getInput("config");
     const octokit = new github.GitHub(token);
 
-    const configContent = fetchContent(octokit, configPath);
+    const configContent = await fetchContent(octokit, configPath);
     const config = parseConfig(configContent);
 
     core.debug("config");
     core.debug(JSON.stringify(config));
 
-    const { data: pullRequest } = octokit.pulls.get({
+    const { data: pullRequest } = await octokit.pulls.get({
       owner: context.repo.owner,
       repo: context.repo.repo,
       pull_number: context.payload.pull_request.number,
       reviewers: [],
     });
 
-    const changedFiles = getChangedFiles(octokit, pullRequest.number);
+    const changedFiles = await getChangedFiles(octokit, pullRequest.number);
     const author = pullRequest.user.login;
 
     var reviewers = new Set();
