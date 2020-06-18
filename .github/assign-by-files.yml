@@ -2,3 +2,7 @@
 # you can use glob pattern
 '*.md':
   - HiveQA
+'*.md':
+  - HiveQA
+'*.js':
+  - HiveQA
