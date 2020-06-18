@@ -21,6 +21,8 @@ create configuration file
   - bar
 ```
 
+Glob matching is based on the [minimatch library](https://github.com/isaacs/minimatch).
+
 create action file
 
 `.github/workflows/auto-assign.yml`

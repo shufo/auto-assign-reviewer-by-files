@@ -3,7 +3,7 @@ const github = require("@actions/github");
 const context = github.context;
 const { parseConfig } = require("./lib/util");
 const _ = require("lodash");
-const { Minimatch } = require("minimatch");
+var Minimatch = require("minimatch");
 
 // most @actions toolkit packages have async methods
 async function run() {
@@ -28,12 +28,17 @@ async function run() {
     const changedFiles = await getChangedFiles(octokit, pullRequest.number);
     const author = pullRequest.user.login;
 
+    var reviewers = new Set();
     _.each(_.keys(config), (globPattern) => {
       if (hasGlobPatternMatchedFile(changedFiles, globPattern)) {
-        let reviewers = _.pull(config[globPattern], author);
-        assignReviewers(octokit, reviewers);
+        let newReviewers = _.pull(config[globPattern], author);
+        for (const reviewer of newReviewers) {
+          reviewers.add(reviewer);
+        }
       }
     });
+    assignReviewers(octokit, reviewers);
+    core.info("finished!");
   } catch (error) {
     core.setFailed(error.message);
   }
@@ -70,6 +75,7 @@ async function getChangedFiles(client, prNumber) {
 function hasGlobPatternMatchedFile(changedFiles, globPattern) {
   for (const changedFile of changedFiles) {
     if (Minimatch(changedFile, globPattern)) {
+      core.info("  " + changedFile + " matches " + globPattern);
       return true;
     }
   }
