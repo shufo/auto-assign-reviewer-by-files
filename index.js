@@ -7,8 +7,7 @@ var Minimatch = require("minimatch");
 
 // most @actions toolkit packages have async methods
 async function run() {
-  core.setFailed("er");
-//  try {
+  try {
     const token = core.getInput("token", { required: true });
     const configPath = core.getInput("config");
     const octokit = new github.GitHub(token);
@@ -39,9 +38,10 @@ async function run() {
       }
     });
     assignReviewers(octokit, reviewers);
-//  } catch (error) {
-  //  core.setFailed(error.message);
-//  }
+    core.info("finished!");
+  } catch (error) {
+    core.setFailed(error.message);
+  }
 }
 
 async function fetchContent(client, repoPath) {
