@@ -1,9 +1,7 @@
 ---
 # you can use glob pattern
 '*.js':
-  - shufo
+  - HiveQA
 # you can set multiple reviewers
 '.github/**/*.yml':
-  - shufo
-  - shufo2
-  - foo
+  - dvoros
