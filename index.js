@@ -18,6 +18,10 @@ async function run() {
     core.debug("config");
     core.debug(JSON.stringify(config));
 
+    if(_.keys(config).length == 0) {
+      core.setFailed("config is empty or unparsable");
+    }
+
     const { data: pullRequest } = await octokit.pulls.get({
       owner: context.repo.owner,
       repo: context.repo.repo,
