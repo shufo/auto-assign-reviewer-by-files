@@ -17,8 +17,8 @@ async function run() {
     const configContent = await fetchContent(octokit, configPath);
     const config = parseConfig(configContent);
 
-    core.debug("config");
-    core.debug(JSON.stringify(config));
+    core.info("config");
+    core.info(JSON.stringify(config));
 
     const { data: pullRequest } = await octokit.pulls.get({
       owner: context.repo.owner,
@@ -61,9 +61,9 @@ async function getChangedFiles(client, prNumber) {
 
   const changedFiles = listFilesResponse.data.map((f) => f.filename);
 
-  core.debug("found changed files:");
+  core.info("found changed files:");
   for (const file of changedFiles) {
-    core.debug("  " + file);
+    core.info("  " + file);
   }
 
   return changedFiles;
