@@ -4,11 +4,11 @@ const configFilePath = "assign-by-files-sample.yml";
 var Minimatch  = require("minimatch");
 
 test("config parser", async () => {
-  const content = fs.readFileSync(__basedir + "/__test__/" + configFilePath, {
+  const content = fs.readFileSync(__basedir + "/__tests__/" + configFilePath, {
     encoding: "utf8",
   });
   const config = parseConfig(content);
-  expect(config["*.js"]).toMatchObject(["shufo"]);
+  expect(config["*.js"]).toMatchObject(["someone"]);
 });
 
 test("glob pattern test", async () => {
@@ -16,9 +16,7 @@ test("glob pattern test", async () => {
   expect(matched).toBeTruthy();
 });
 
-test("glob pattern test2", async () => {
+test("glob pattern test", async () => {
   const matched = Minimatch('.github/workflows/unit-test.yml', "*.md");
-  console.log("XCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx");
-  console.log(matched);
   expect(!matched).toBeTruthy();
 });
