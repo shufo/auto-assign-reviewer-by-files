@@ -4,7 +4,7 @@ const github = require("@actions/github");
 const context = github.context;
 const { parseConfig } = require("./lib/util");
 const _ = require("lodash");
-const { Minimatch } = require("minimatch");
+var Minimatch = require("minimatch");
 
 // most @actions toolkit packages have async methods
 async function run() {
