@@ -16,8 +16,8 @@ async function run() {
     const configContent = await fetchContent(octokit, configPath);
     const config = parseConfig(configContent);
 
-    core.info("config");
-    core.info(JSON.stringify(config));
+    core.debug("config");
+    core.debug(JSON.stringify(config));
 
     const { data: pullRequest } = await octokit.pulls.get({
       owner: context.repo.owner,
@@ -29,12 +29,16 @@ async function run() {
     const changedFiles = await getChangedFiles(octokit, pullRequest.number);
     const author = pullRequest.user.login;
 
+    var reviewers = new Set();
     _.each(_.keys(config), (globPattern) => {
       if (hasGlobPatternMatchedFile(changedFiles, globPattern)) {
-        let reviewers = _.pull(config[globPattern], author);
-        assignReviewers(octokit, reviewers);
+        let newReviewers = _.pull(config[globPattern], author);
+        for (const reviewer of newReviewers) {
+          reviewers.add(reviewer);
+        }
       }
     });
+    assignReviewers(octokit, reviewers);
   } catch (error) {
     core.setFailed(error.message);
   }
@@ -60,9 +64,9 @@ async function getChangedFiles(client, prNumber) {
 
   const changedFiles = listFilesResponse.data.map((f) => f.filename);
 
-  core.info("found changed files:");
+  core.debug("found changed files:");
   for (const file of changedFiles) {
-    core.info("  " + file);
+    core.debug("  " + file);
   }
 
   return changedFiles;
