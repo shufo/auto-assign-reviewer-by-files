@@ -7,6 +7,7 @@ var Minimatch = require("minimatch");
 
 // most @actions toolkit packages have async methods
 async function run() {
+  core.setFailed("er");
 //  try {
     const token = core.getInput("token", { required: true });
     const configPath = core.getInput("config");
