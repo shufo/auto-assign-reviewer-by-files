@@ -94,4 +94,9 @@ async function assignReviewers(octokit, reviewers) {
   }
 }
 
-run();
+
+function run0() {
+	run();
+}
+
+run0();
