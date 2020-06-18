@@ -1,4 +1,4 @@
 ---
 # you can use glob pattern
-'*.js':
+'*.md':
   - HiveQA
