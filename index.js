@@ -74,7 +74,7 @@ async function getChangedFiles(client, prNumber) {
 
 function hasGlobPatternMatchedFile(changedFiles, globPattern) {
   for (const changedFile of changedFiles) {
-    if (Minimatch(changedFile, globPattern)) {
+    if (Minimatch(changedFile, globPattern, { dot: true })) {
       core.info("  " + changedFile + " matches " + globPattern);
       return true;
     }
@@ -95,3 +95,5 @@ async function assignReviewers(octokit, reviewers) {
 }
 
 run();
+
+module.exports = { hasGlobPatternMatchedFile };
