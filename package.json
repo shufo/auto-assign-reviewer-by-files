@@ -25,17 +25,17 @@
   },
   "homepage": "https://github.com/shufo/auto-assign-reviewer-by-files#readme",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "@actions/github": "^2.2.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "minimatch": "^3.0.4",
     "yaml": "^1.10.0"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",
     "app-root-path": "^3.0.0",
-    "eslint": "^7.2.0",
-    "eslint-plugin-jest": "^23.13.2",
-    "jest": "^26.0.1"
+    "eslint": "^7.16.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "jest": "^26.6.3"
   }
 }
