@@ -13,8 +13,12 @@ create configuration file
 ```yaml
 ---
 # you can use glob pattern
-'*.js':
+'**/*.js':
   - shufo
+
+'.github/workflows/*.yml':
+  - shufo2
+
 # you can set multiple reviewers
 '.github/**/*.yml':
   - foo
@@ -45,3 +49,21 @@ jobs:
 ## Example
 
 ![image](https://user-images.githubusercontent.com/1641039/80326369-7ee86f00-8873-11ea-9769-887b083575ad.png)
+
+## Troubleshooting
+
+#### Does not match any files
+
+- Please check if glob pattern is correct or not
+
+```yaml
+# it will matches only js files under the root directory
+'*.js':
+  - foo
+# it will matches `.github/foo.yaml` but not `.github/workflows/bar.yaml`
+'.github/*':
+  - bar
+# match any files
+'**/*':
+  - shufo
+```
