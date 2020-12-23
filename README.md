@@ -63,7 +63,7 @@ jobs:
 # it will matches `.github/foo.yaml` but not `.github/workflows/bar.yaml`
 '.github/*':
   - bar
-# match any files
+# it will match any files
 '**/*':
   - shufo
 ```
