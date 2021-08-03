@@ -37,7 +37,9 @@ async function run() {
         }
       }
     });
-    assignReviewers(octokit, reviewers);
+    assignReviewers(octokit, reviewers).catch((error) => {
+      core.setFailed(error.message);
+    });
     core.info("finished!");
   } catch (error) {
     core.setFailed(error.message);
