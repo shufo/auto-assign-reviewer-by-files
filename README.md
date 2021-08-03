@@ -13,14 +13,14 @@ create configuration file
 ```yaml
 ---
 # you can use glob pattern
-'**/*.js':
+"**/*.js":
   - shufo
 
-'.github/workflows/*.yml':
+".github/workflows/*.yml":
   - shufo2
 
 # you can set multiple reviewers
-'.github/**/*.yml':
+".github/**/*.yml":
   - foo
   - bar
 ```
@@ -40,10 +40,10 @@ jobs:
   assign_reviewer:
     runs-on: ubuntu-latest
     steps:
-    - uses: shufo/auto-assign-reviewer-by-files@v1.1.1
-      with:
-        config: '.github/assign-by-files.yml'
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: shufo/auto-assign-reviewer-by-files@v1.1.2
+        with:
+          config: ".github/assign-by-files.yml"
+          token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## Example
@@ -58,12 +58,12 @@ jobs:
 
 ```yaml
 # it will matches only js files under the root directory
-'*.js':
+"*.js":
   - foo
 # it will matches `.github/foo.yaml` but not `.github/workflows/bar.yaml`
-'.github/*':
+".github/*":
   - bar
 # it will match any files
-'**/*':
+"**/*":
   - shufo
 ```
