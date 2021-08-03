@@ -71,4 +71,35 @@ jobs:
 ## Contributors
 
 <!-- readme: collaborators,contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/shufo">
+            <img src="https://avatars.githubusercontent.com/u/1641039?v=4" width="100;" alt="shufo"/>
+            <br />
+            <sub><b>Shuhei Hayashibara</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/shufo2">
+            <img src="https://avatars.githubusercontent.com/u/63141322?v=4" width="100;" alt="shufo2"/>
+            <br />
+            <sub><b>shufo2</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/jsoref">
+            <img src="https://avatars.githubusercontent.com/u/2119212?v=4" width="100;" alt="jsoref"/>
+            <br />
+            <sub><b>Josh Soref</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/kgyrtkirk">
+            <img src="https://avatars.githubusercontent.com/u/1902540?v=4" width="100;" alt="kgyrtkirk"/>
+            <br />
+            <sub><b>Zoltan Haindrich</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: collaborators,contributors -end -->
