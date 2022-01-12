@@ -6,3 +6,5 @@
 ".github/**/*.yml":
   - shufo
   - shufo2
+"README.md":
+  - shufo2
