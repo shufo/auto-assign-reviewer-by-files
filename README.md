@@ -40,7 +40,7 @@ jobs:
   assign_reviewer:
     runs-on: ubuntu-latest
     steps:
-      - uses: shufo/auto-assign-reviewer-by-files@v1.1.2
+      - uses: shufo/auto-assign-reviewer-by-files@v1.1.3
         with:
           config: ".github/assign-by-files.yml"
           token: ${{ secrets.GITHUB_TOKEN }}
