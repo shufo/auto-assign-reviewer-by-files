@@ -13,14 +13,14 @@ create configuration file
 ```yaml
 ---
 # you can use glob pattern
-'**/*.js':
+"**/*.js":
   - shufo
 
-'.github/workflows/*.yml':
+".github/workflows/*.yml":
   - shufo2
 
 # you can set multiple reviewers
-'.github/**/*.yml':
+".github/**/*.yml":
   - foo
   - bar
 ```
@@ -40,10 +40,10 @@ jobs:
   assign_reviewer:
     runs-on: ubuntu-latest
     steps:
-    - uses: shufo/auto-assign-reviewer-by-files@v1.1.1
-      with:
-        config: '.github/assign-by-files.yml'
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: shufo/auto-assign-reviewer-by-files@v1.1.2
+        with:
+          config: ".github/assign-by-files.yml"
+          token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## Example
@@ -58,12 +58,48 @@ jobs:
 
 ```yaml
 # it will matches only js files under the root directory
-'*.js':
+"*.js":
   - foo
 # it will matches `.github/foo.yaml` but not `.github/workflows/bar.yaml`
-'.github/*':
+".github/*":
   - bar
 # it will match any files
-'**/*':
+"**/*":
   - shufo
 ```
+
+## Contributors
+
+<!-- readme: collaborators,contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/shufo">
+            <img src="https://avatars.githubusercontent.com/u/1641039?v=4" width="100;" alt="shufo"/>
+            <br />
+            <sub><b>Shuhei Hayashibara</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/shufo2">
+            <img src="https://avatars.githubusercontent.com/u/63141322?v=4" width="100;" alt="shufo2"/>
+            <br />
+            <sub><b>Shufo2</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/jsoref">
+            <img src="https://avatars.githubusercontent.com/u/2119212?v=4" width="100;" alt="jsoref"/>
+            <br />
+            <sub><b>Josh Soref</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/kgyrtkirk">
+            <img src="https://avatars.githubusercontent.com/u/1902540?v=4" width="100;" alt="kgyrtkirk"/>
+            <br />
+            <sub><b>Zoltan Haindrich</b></sub>
+        </a>
+    </td></tr>
+</table>
+<!-- readme: collaborators,contributors -end -->

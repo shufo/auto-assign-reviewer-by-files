@@ -58,13 +58,23 @@ async function fetchContent(client, repoPath) {
 }
 
 async function getChangedFiles(client, prNumber) {
-  const listFilesResponse = await client.pulls.listFiles({
-    owner: github.context.repo.owner,
-    repo: github.context.repo.repo,
-    pull_number: prNumber,
-  });
+  const listFilesResponse = [];
+  let page = 1;
+  let response;
+  
+  do {
+    response = await client.pulls.listFiles({
+      owner: context.repo.owner,
+      repo: context.repo.repo,
+      pull_number: prNumber,
+      per_page: 100,
+      page
+    });
+    listFilesResponse.push(...response.data);
+    page += 1;
+  } while (response.data.length)
 
-  const changedFiles = listFilesResponse.data.map((f) => f.filename);
+  const changedFiles = listFilesResponse.map((f) => f.filename);
 
   core.debug("found changed files:");
   for (const file of changedFiles) {
