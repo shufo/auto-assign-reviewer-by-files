@@ -84,7 +84,7 @@ jobs:
         <a href="https://github.com/shufo2">
             <img src="https://avatars.githubusercontent.com/u/63141322?v=4" width="100;" alt="shufo2"/>
             <br />
-            <sub><b>shufo2</b></sub>
+            <sub><b>Shufo2</b></sub>
         </a>
     </td>
     <td align="center">
