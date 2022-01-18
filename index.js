@@ -102,7 +102,7 @@ async function assignReviewers(octokit, reviewers) {
       repo: context.repo.repo,
       pull_number: context.payload.pull_request.number,
       reviewers: [reviewer],
-      team_reviewers: [reviewers],
+      team_reviewers: [reviewer],
     });
   }
 }
