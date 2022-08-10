@@ -101,7 +101,6 @@ async function assignReviewers(octokit, reviewers) {
       owner: context.repo.owner,
       repo: context.repo.repo,
       pull_number: context.payload.pull_request.number,
-      reviewers: [reviewer],
       team_reviewers: [reviewer],
     });
   }
