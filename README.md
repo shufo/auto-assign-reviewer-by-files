@@ -23,6 +23,10 @@ create configuration file
 ".github/**/*.yml":
   - foo
   - bar
+  
+# you can set team reviewers
+".github/**/*.md":
+  - team: baz
 ```
 
 Glob matching is based on the [minimatch library](https://github.com/isaacs/minimatch).
