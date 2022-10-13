@@ -97,14 +97,20 @@ function hasGlobPatternMatchedFile(changedFiles, globPattern) {
 
 async function assignReviewers(octokit, reviewers) {
   for (const reviewer of reviewers) {
+    await assignReviewer(octokit, reviewer);
+  }
+}
+
+async function assignReviewer(octokit, reviewer) {
+    const teamReviewer = reviewer.match(/^team:\s+?(.*?)$/);
+    const reviewerKey = teamReviewer ? "team_reviewers" : "reviewers";
+    const reviewerTarget = teamReviewer ? teamReviewer[1] : reviewer;
     await octokit.pulls.createReviewRequest({
       owner: context.repo.owner,
       repo: context.repo.repo,
       pull_number: context.payload.pull_request.number,
-      reviewers: [reviewer],
-      team_reviewers: [reviewer],
+      [reviewerKey]: [reviewerTarget],
     });
-  }
 }
 
 run();
