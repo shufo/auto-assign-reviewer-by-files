@@ -102,10 +102,15 @@ async function assignReviewers(octokit, reviewers) {
 }
 
 async function assignReviewer(octokit, reviewer) {
-  core.info("reviewer: " + reviewer);
-  const teamReviewer = reviewer.match(/^team:\s+?(.*?)$/);
-  const reviewerKey = teamReviewer ? "team_reviewers" : "reviewers";
-  const reviewerTarget = teamReviewer ? teamReviewer[1] : reviewer;
+  core.info(reviewer);
+  let reviewerKey = "reviewers";
+  let reviewerTarget = reviewer;
+
+  if (_.isObject(reviewer) && _.has(reviewer, "team")) {
+    reviewerKey = "team_reviewers";
+    reviewerTarget = reviewer.team;
+  }
+
   await octokit.pulls.createReviewRequest({
     owner: context.repo.owner,
     repo: context.repo.repo,
