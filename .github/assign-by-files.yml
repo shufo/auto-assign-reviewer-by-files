@@ -7,3 +7,5 @@
   - shufo
   - shufo2
   - foo
+'*.md':
+  - team: shufo-org/test-team
