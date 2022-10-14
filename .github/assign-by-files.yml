@@ -4,4 +4,4 @@
   - shufo
 # you can set multiple reviewers
 "*.md":
-  - shufo2
+  - team: test-team
