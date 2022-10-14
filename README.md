@@ -24,7 +24,7 @@ create configuration file
   - foo
   - bar
 
-# you can set team reviewers
+# you can set team reviewers (repo scope token required)
 ".github/**/*.md":
   - team: baz
 ```
