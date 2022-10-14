@@ -81,7 +81,7 @@ jobs:
 
 3. Use the secret instead of the default `GITHUB_TOKEN` when running action.
 
-```
+```yaml
 - uses: shufo/auto-assign-reviewer-by-files@v1.1.3
   with:
     config: ".github/assign-by-files.yml"
