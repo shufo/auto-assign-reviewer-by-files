@@ -95,7 +95,7 @@ jobs:
         <a href="https://github.com/jonathansadowski">
             <img src="https://avatars.githubusercontent.com/u/363749?v=4" width="100;" alt="jonathansadowski"/>
             <br />
-            <sub><b>jonathansadowski</b></sub>
+            <sub><b>Jonathansadowski</b></sub>
         </a>
     </td>
     <td align="center">
