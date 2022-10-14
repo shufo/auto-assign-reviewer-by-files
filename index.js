@@ -61,18 +61,18 @@ async function getChangedFiles(client, prNumber) {
   const listFilesResponse = [];
   let page = 1;
   let response;
-  
+
   do {
     response = await client.pulls.listFiles({
       owner: context.repo.owner,
       repo: context.repo.repo,
       pull_number: prNumber,
       per_page: 100,
-      page
+      page,
     });
     listFilesResponse.push(...response.data);
     page += 1;
-  } while (response.data.length)
+  } while (response.data.length);
 
   const changedFiles = listFilesResponse.map((f) => f.filename);
 
@@ -102,15 +102,16 @@ async function assignReviewers(octokit, reviewers) {
 }
 
 async function assignReviewer(octokit, reviewer) {
-    const teamReviewer = reviewer.match(/^team:\s+?(.*?)$/);
-    const reviewerKey = teamReviewer ? "team_reviewers" : "reviewers";
-    const reviewerTarget = teamReviewer ? teamReviewer[1] : reviewer;
-    await octokit.pulls.createReviewRequest({
-      owner: context.repo.owner,
-      repo: context.repo.repo,
-      pull_number: context.payload.pull_request.number,
-      [reviewerKey]: [reviewerTarget],
-    });
+  core.info("reviewer: " + reviewer);
+  const teamReviewer = reviewer.match(/^team:\s+?(.*?)$/);
+  const reviewerKey = teamReviewer ? "team_reviewers" : "reviewers";
+  const reviewerTarget = teamReviewer ? teamReviewer[1] : reviewer;
+  await octokit.pulls.createReviewRequest({
+    owner: context.repo.owner,
+    repo: context.repo.repo,
+    pull_number: context.payload.pull_request.number,
+    [reviewerKey]: [reviewerTarget],
+  });
 }
 
 run();
