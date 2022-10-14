@@ -90,6 +90,10 @@ Follow [this](https://github.com/peter-evans/create-pull-request/issues/155#issu
     token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 ```
 
+#### Use of team reviewers results in: "Reviews may only be requested from collaborators..."
+
+- Add target team to your repository [collaborators](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository).
+
 ## Contributors
 
 <!-- readme: collaborators,contributors -start -->
