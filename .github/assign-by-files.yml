@@ -3,5 +3,5 @@
 '*.js':
   - shufo
 # you can set multiple reviewers
-'*.md':
-  - team: shufo-org/test-team
+"*.md":
+  - team: test-team
