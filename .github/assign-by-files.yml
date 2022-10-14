@@ -1,7 +1,7 @@
 ---
 # you can use glob pattern
-'*.js':
+"*.js":
   - shufo
 # you can set multiple reviewers
 "*.md":
-  - team: test-team
+  - shufo2
