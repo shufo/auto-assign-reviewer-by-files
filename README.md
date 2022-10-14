@@ -74,6 +74,8 @@ jobs:
 
 ### Use of team reviewers results in: "Could not resolve to a node with the global id of..." error
 
+Follow [this](https://github.com/peter-evans/create-pull-request/issues/155#issuecomment-611904487) instruction.
+
 1. Create `repo` scoped [PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 2. Copy the generated PAT to a secret in your repository.
 
