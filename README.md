@@ -23,7 +23,7 @@ create configuration file
 ".github/**/*.yml":
   - foo
   - bar
-  
+
 # you can set team reviewers
 ".github/**/*.md":
   - team: baz
@@ -70,6 +70,22 @@ jobs:
 # it will match any files
 "**/*":
   - shufo
+```
+
+### Use of team reviewers results in: "Could not resolve to a node with the global id of..." error
+
+1. Create `repo` scoped [PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+2. Copy the generated PAT to a secret in your repository.
+
+   - e.g. `gh secret set PERSONAL_ACCESS_TOKEN -b "ghp_0LAGTTT~~~~AAAA"`
+
+3. Use the secret instead of the default `GITHUB_TOKEN` when running action.
+
+```
+- uses: shufo/auto-assign-reviewer-by-files@v1.1.3
+  with:
+    config: ".github/assign-by-files.yml"
+    token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 ```
 
 ## Contributors
