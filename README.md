@@ -23,7 +23,7 @@ create configuration file
 ".github/**/*.yml":
   - foo
   - bar
-  
+
 # you can set team reviewers
 ".github/**/*.md":
   - team: baz
@@ -121,3 +121,7 @@ jobs:
     </td></tr>
 </table>
 <!-- readme: collaborators,contributors -end -->
+
+## Test
+
+This is a test change
