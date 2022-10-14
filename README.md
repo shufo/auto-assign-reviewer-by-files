@@ -72,7 +72,7 @@ jobs:
   - shufo
 ```
 
-### Use of team reviewers results in: "Could not resolve to a node with the global id of..." error
+#### Use of team reviewers results in: "Could not resolve to a node with the global id of..." error
 
 Follow [this](https://github.com/peter-evans/create-pull-request/issues/155#issuecomment-611904487) instruction.
 
