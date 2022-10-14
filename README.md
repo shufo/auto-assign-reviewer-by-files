@@ -92,6 +92,20 @@ jobs:
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/jonathansadowski">
+            <img src="https://avatars.githubusercontent.com/u/363749?v=4" width="100;" alt="jonathansadowski"/>
+            <br />
+            <sub><b>jonathansadowski</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/aschwenn">
+            <img src="https://avatars.githubusercontent.com/u/34226036?v=4" width="100;" alt="aschwenn"/>
+            <br />
+            <sub><b>Andrew Schwenn</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/jsoref">
             <img src="https://avatars.githubusercontent.com/u/2119212?v=4" width="100;" alt="jsoref"/>
             <br />
