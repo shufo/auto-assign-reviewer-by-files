@@ -31,7 +31,6 @@ async function run() {
     var reviewers = new Set();
     _.each(_.keys(config), (globPattern) => {
       if (hasGlobPatternMatchedFile(changedFiles, globPattern)) {
-        console.log(config[globPattern], author);
         let newReviewers = _.pull(config[globPattern], author);
         for (const reviewer of newReviewers) {
           reviewers.add(reviewer);
