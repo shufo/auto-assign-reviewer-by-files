@@ -141,5 +141,13 @@ Follow [this](https://github.com/peter-evans/create-pull-request/issues/155#issu
             <sub><b>Zoltan Haindrich</b></sub>
         </a>
     </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/snyk-bot">
+            <img src="https://avatars.githubusercontent.com/u/19733683?v=4" width="100;" alt="snyk-bot"/>
+            <br />
+            <sub><b>Snyk Bot</b></sub>
+        </a>
+    </td></tr>
 </table>
 <!-- readme: collaborators,contributors -end -->
