@@ -1,9 +1,10 @@
 ---
 # you can use glob pattern
-'*.js':
+"*.js":
   - shufo
 # you can set multiple reviewers
-'.github/**/*.yml':
+".github/**/*.yml":
   - shufo
   - shufo2
-  - foo
+"README.md":
+  - shufo2
