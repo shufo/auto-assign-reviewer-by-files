@@ -98,56 +98,60 @@ Follow [this](https://github.com/peter-evans/create-pull-request/issues/155#issu
 
 <!-- readme: collaborators,contributors -start -->
 <table>
-<tr>
-    <td align="center">
-        <a href="https://github.com/shufo">
-            <img src="https://avatars.githubusercontent.com/u/1641039?v=4" width="100;" alt="shufo"/>
-            <br />
-            <sub><b>Shuhei Hayashibara</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/shufo2">
-            <img src="https://avatars.githubusercontent.com/u/63141322?v=4" width="100;" alt="shufo2"/>
-            <br />
-            <sub><b>Shufo2</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/jonathansadowski">
-            <img src="https://avatars.githubusercontent.com/u/363749?v=4" width="100;" alt="jonathansadowski"/>
-            <br />
-            <sub><b>Jonathansadowski</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/aschwenn">
-            <img src="https://avatars.githubusercontent.com/u/34226036?v=4" width="100;" alt="aschwenn"/>
-            <br />
-            <sub><b>Andrew Schwenn</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/jsoref">
-            <img src="https://avatars.githubusercontent.com/u/2119212?v=4" width="100;" alt="jsoref"/>
-            <br />
-            <sub><b>Josh Soref</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/kgyrtkirk">
-            <img src="https://avatars.githubusercontent.com/u/1902540?v=4" width="100;" alt="kgyrtkirk"/>
-            <br />
-            <sub><b>Zoltan Haindrich</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/snyk-bot">
-            <img src="https://avatars.githubusercontent.com/u/19733683?v=4" width="100;" alt="snyk-bot"/>
-            <br />
-            <sub><b>Snyk Bot</b></sub>
-        </a>
-    </td></tr>
+	<tbody>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/shufo">
+                    <img src="https://avatars.githubusercontent.com/u/1641039?v=4" width="100;" alt="shufo"/>
+                    <br />
+                    <sub><b>Shuhei Hayashibara</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/shufo2">
+                    <img src="https://avatars.githubusercontent.com/u/63141322?v=4" width="100;" alt="shufo2"/>
+                    <br />
+                    <sub><b>Shufo2</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/jonathansadowski">
+                    <img src="https://avatars.githubusercontent.com/u/363749?v=4" width="100;" alt="jonathansadowski"/>
+                    <br />
+                    <sub><b>Jonathansadowski</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/aschwenn">
+                    <img src="https://avatars.githubusercontent.com/u/34226036?v=4" width="100;" alt="aschwenn"/>
+                    <br />
+                    <sub><b>Andrew Schwenn</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/jsoref">
+                    <img src="https://avatars.githubusercontent.com/u/2119212?v=4" width="100;" alt="jsoref"/>
+                    <br />
+                    <sub><b>Josh Soref</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/kgyrtkirk">
+                    <img src="https://avatars.githubusercontent.com/u/1902540?v=4" width="100;" alt="kgyrtkirk"/>
+                    <br />
+                    <sub><b>Zoltan Haindrich</b></sub>
+                </a>
+            </td>
+		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/snyk-bot">
+                    <img src="https://avatars.githubusercontent.com/u/19733683?v=4" width="100;" alt="snyk-bot"/>
+                    <br />
+                    <sub><b>Snyk Bot</b></sub>
+                </a>
+            </td>
+		</tr>
+	<tbody>
 </table>
 <!-- readme: collaborators,contributors -end -->
