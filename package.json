@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",
-    "app-root-path": "^3.0.0",
+    "app-root-path": "^3.1.0",
     "eslint": "^8.28.0",
     "eslint-plugin-jest": "^23.20.0",
     "jest": "^26.6.3"
