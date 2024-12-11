@@ -10,7 +10,7 @@ async function run() {
   try {
     const token = core.getInput("token", { required: true });
     const configPath = core.getInput("config");
-    const octokit = new github.GitHub(token);
+    const octokit = github.getOctokit(token);
 
     const configContent = await fetchContent(octokit, configPath);
     const config = parseConfig(configContent);
@@ -18,7 +18,7 @@ async function run() {
     core.debug("config");
     core.debug(JSON.stringify(config));
 
-    const { data: pullRequest } = await octokit.pulls.get({
+    const { data: pullRequest } = await octokit.rest.pulls.get({
       owner: context.repo.owner,
       repo: context.repo.repo,
       pull_number: context.payload.pull_request.number,
@@ -47,7 +47,7 @@ async function run() {
 }
 
 async function fetchContent(client, repoPath) {
-  const response = await client.repos.getContents({
+  const response = await client.rest.repos.getContent({
     owner: github.context.repo.owner,
     repo: github.context.repo.repo,
     path: repoPath,
@@ -63,7 +63,7 @@ async function getChangedFiles(client, prNumber) {
   let response;
 
   do {
-    response = await client.pulls.listFiles({
+    response = await client.rest.pulls.listFiles({
       owner: context.repo.owner,
       repo: context.repo.repo,
       pull_number: prNumber,
@@ -110,7 +110,7 @@ async function assignReviewer(octokit, reviewer) {
     reviewerTarget = reviewer.team;
   }
 
-  await octokit.pulls.createReviewRequest({
+  await octokit.rest.pulls.requestReviewers({
     owner: context.repo.owner,
     repo: context.repo.repo,
     pull_number: context.payload.pull_request.number,
