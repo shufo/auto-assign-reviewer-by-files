@@ -47,7 +47,7 @@ async function run() {
 }
 
 async function fetchContent(client, repoPath) {
-  const response = await client.rest.repos.getContents({
+  const response = await client.rest.repos.getContent({
     owner: github.context.repo.owner,
     repo: github.context.repo.repo,
     path: repoPath,
