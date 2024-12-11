@@ -1,6 +1,6 @@
 {
   "name": "auto-assign-reviewer-by-files",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Automatically assigns reviewers to PR based on changed files",
   "main": "index.js",
   "scripts": {
