@@ -18,7 +18,7 @@ async function run() {
     core.debug("config");
     core.debug(JSON.stringify(config));
 
-    const { data: pullRequest } = await octokit.pulls.get({
+    const { data: pullRequest } = await octokit.rest.pulls.get({
       owner: context.repo.owner,
       repo: context.repo.repo,
       pull_number: context.payload.pull_request.number,
