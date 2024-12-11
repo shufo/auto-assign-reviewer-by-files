@@ -10,7 +10,7 @@ async function run() {
   try {
     const token = core.getInput("token", { required: true });
     const configPath = core.getInput("config");
-    const octokit = github.getOctoKit(token);
+    const octokit = github.getOctokit(token);
 
     const configContent = await fetchContent(octokit, configPath);
     const config = parseConfig(configContent);
