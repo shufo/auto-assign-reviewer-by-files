@@ -44,7 +44,7 @@ jobs:
   assign_reviewer:
     runs-on: ubuntu-latest
     steps:
-      - uses: shufo/auto-assign-reviewer-by-files@v1.2.0
+      - uses: shufo/auto-assign-reviewer-by-files@v1.2.1
         with:
           config: ".github/assign-by-files.yml"
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -84,7 +84,7 @@ Follow [this](https://github.com/peter-evans/create-pull-request/issues/155#issu
 3. Use the secret instead of the default `GITHUB_TOKEN` when running action.
 
 ```yaml
-- uses: shufo/auto-assign-reviewer-by-files@v1.2.0
+- uses: shufo/auto-assign-reviewer-by-files@v1.2.1
   with:
     config: ".github/assign-by-files.yml"
     token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
