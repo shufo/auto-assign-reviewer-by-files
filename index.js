@@ -47,7 +47,7 @@ async function run() {
 }
 
 async function fetchContent(client, repoPath) {
-  const response = await client.repos.getContents({
+  const response = await client.rest.repos.getContents({
     owner: github.context.repo.owner,
     repo: github.context.repo.repo,
     path: repoPath,
@@ -63,7 +63,7 @@ async function getChangedFiles(client, prNumber) {
   let response;
 
   do {
-    response = await client.pulls.listFiles({
+    response = await client.rest.pulls.listFiles({
       owner: context.repo.owner,
       repo: context.repo.repo,
       pull_number: prNumber,
@@ -110,7 +110,7 @@ async function assignReviewer(octokit, reviewer) {
     reviewerTarget = reviewer.team;
   }
 
-  await octokit.pulls.createReviewRequest({
+  await octokit.rest.pulls.createReviewRequest({
     owner: context.repo.owner,
     repo: context.repo.repo,
     pull_number: context.payload.pull_request.number,
