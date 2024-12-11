@@ -110,7 +110,7 @@ async function assignReviewer(octokit, reviewer) {
     reviewerTarget = reviewer.team;
   }
 
-  await octokit.rest.pulls.createReviewRequest({
+  await octokit.rest.pulls.requestReviewers({
     owner: context.repo.owner,
     repo: context.repo.repo,
     pull_number: context.payload.pull_request.number,
