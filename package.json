@@ -32,7 +32,7 @@
     "yaml": "^2.0.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.38.3",
+    "@vercel/ncc": "^0.45.0",
     "app-root-path": "^3.0.0",
     "eslint": "^8.28.0",
     "eslint-plugin-jest": "^23.20.0",
